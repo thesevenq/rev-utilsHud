@@ -2,6 +2,13 @@ RegisterKeyMapping('+svacetiri', ' Blinkeri', 'keyboard', 'BACK')
 RegisterKeyMapping('+lijeviblinker', ' Lijevi blinker', 'keyboard', 'LEFT')
 RegisterKeyMapping('+desniblinker', ' Desni nlinker', 'keyboard', 'RIGHT')
 
+CreateThread(function()
+	while true do
+		TriggerServerEvent("rev-utilsHud/updatujStateove/")
+		Wait(4000)
+	end
+end)
+
 
 Blinkeri = {
 	lijevi = false,
